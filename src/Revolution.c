@@ -11,14 +11,14 @@
 
 #define MY_UUID { 0xA1, 0x23, 0x08, 0x61, 0xD4, 0xEB, 0x4F, 0x6E, 0xA2, 0xD0, 0xEA, 0xA2, 0xA0, 0x77, 0x97, 0xDD }
 PBL_APP_INFO(MY_UUID,
-             "Revolution", "Douwe Maan",
+             "Revolution (white)", "Douwe Maan",
              1, 3, /* App version */
              RESOURCE_ID_IMAGE_MENU_ICON,
              APP_INFO_WATCH_FACE);
 
 
 // Settings
-#define USE_AMERICAN_DATE_FORMAT      false
+#define USE_AMERICAN_DATE_FORMAT      true
 #define TIME_SLOT_ANIMATION_DURATION  500
 
 // Magic numbers
@@ -440,7 +440,7 @@ void pbl_main(void *params) {
 void handle_init(AppContextRef ctx) {
   window_init(&window, "Revolution");
   window_stack_push(&window, true /* Animated */);
-  window_set_background_color(&window, GColorBlack);
+  window_set_background_color(&window, GColorWhite);
 
   resource_init_current_app(&APP_RESOURCES);
 
